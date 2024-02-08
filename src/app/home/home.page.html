@@ -1,0 +1,31 @@
+<ion-content [fullscreen]="true">
+  <button style="margin: 10px; display: flex; justify-content: flex-end; align-items: flex-start; font-size: larger;
+    border-radius: 25px; box-shadow: 3px 4px 15px 2px; background-color: transparent;
+    color: gray;" routerLink="/login"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+    </svg></button>
+  <div style="font-size: 22px; text-align: center; font-family: system-ui; font-weight: bold; margin-top: 1rem; color: gray;">Carga de credito</div>
+  <div style=" text-align: center; font-family: cursive; margin-top: 1rem; font-size: 18px; text-decoration: overline">{{titulo}}</div>
+  <div style="display: flex;  justify-content: center; align-items: center; margin-top: 4rem">
+    <div style="width: 80%; background-color: bisque; border-radius: 10px; padding: 50px; box-shadow: 2px 2px 15px 10px green">
+      <div style=" text-align: center; font-family: cursive; font-size: 26px; text-decoration: underline;margin-bottom: 2rem">Saldo actual</div>
+      <div style=" text-align: center; font-family: system-ui; font-size: 50px; color: green; font-weight: bold;">${{this.auth.userLoggeado.saldoActual}}.-</div>
+    </div>
+  </div>
+  <div *ngIf="toast">
+    <div style="background-color: rgb(220 79 79 / 81%);color: white;width: 80%; padding: 2%; border-radius: 10px;
+    position: absolute; top: 18%; left: 10%; font-size: 14px; z-index: 999999; text-align: center;">{{mensaje}}</div>
+  </div>
+  <div style="display: flex; justify-content: center; align-items: center; width: 100%; height: 30%;">
+    <div (click)='leerInfo()' style="background-color: rgba(139, 69, 19, 0.808); width: 35%; height: 35%; border-radius: 10px; display: flex; justify-content: center; align-items: center;">
+      <a style='color: white; font-size: 20px; font-weight: bold;' >Leer QR</a>
+      <!-- <ion-button (click)='leerInfo()'>Leer QR</ion-button> -->
+    </div>
+  </div>
+  <div style="display: flex; justify-content: center; align-items: center; width: 100%; height: 10%;">
+    <div (click)='limpiarSaldo()' style="background-color: #c8c7c5; width: 35%; height: 35%; border-radius: 10px; display: flex; justify-content: center; align-items: center;">
+      <a style='color: white; font-size: 14px; font-weight: bold;'>Borrar saldo</a>
+      <!-- <ion-button (click)='leerInfo()'>Leer QR</ion-button> -->
+    </div>
+  </div>
+</ion-content>

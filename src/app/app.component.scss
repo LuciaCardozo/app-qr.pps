@@ -1,0 +1,20 @@
+#iconSinFlechas{
+    position: absolute; 
+    top: 10rem;
+}
+
+#splashAnimado{
+    position: absolute; 
+    top: 10rem;
+    animation-name: atrapando;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    //visibility: hidden;
+}
+
+@keyframes atrapando {
+    0%   {rotate: 360deg;}
+    50%  {rotate: 0deg;}
+    100% {rotate: 180deg;}
+    50%  {rotate: 0deg;}  
+}
